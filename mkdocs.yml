@@ -1,4 +1,59 @@
-site_name: My Docs
+site_name: My Blogs
+site_description: A collection of my blogs
 site_url: https://sitename.example
+
 theme:
   name: material
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: deep orange
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      categories_allowed:
+        - LLM
+        - Tech
+        - AI
+        - Life
+      post_url_format: "{slug}"
+
+  - tags:
+      tags_file: tags.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      name: Alphagon
+      link: https://github.com/Alphagon
+    - icon: /fontawesome/regular/envelope
+      name: contact us
+      link: mailto:y.saisumanth@gmail.com
+    # - icon: /material/mailbox
+    #   name: contact us
+    #   link: /contact
+
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
