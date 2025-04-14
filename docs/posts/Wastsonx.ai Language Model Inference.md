@@ -18,26 +18,26 @@ This blog will walk you through how to access language models on IBM Wastonx.ai 
 
 ### Getting Project ID
 
-After logging into your IBM cloud account navigate to [watsonx.ai](https://watsonx.ai). You'll be welcomed with the following screen. 
+After logging into your IBM cloud account, navigate to [watsonx.ai](https://watsonx.ai). You'll be welcomed with the following screen:
 ![0](../images/watsonx_1.png)
 
-On the top left corner you'll find the menu button. Choose Projects and create a new project and give it some name. 
-Next go to the manage section and select General. There you need to copy the Project ID and store it somewhere, we will later use it in the API calls.
+In the top left corner, you'll find the menu button. Choose "Projects", create a new project, and give it a name. 
+Next, go to the "Manage" section and select "General". Copy the Project ID and store it somewhere safe, as we will later use it in the API calls.
 
 ![1](../images/watsonx_2.png)
 
 ### Creating Service ID and API Token
 
-You need to create Service ID and this should be added as a collaborator for your newly created project.
+You need to create Service ID and add it as a collaborator for your newly created project.
 
-For this first go to the Access (IAM). Select Service IDs in the Manage Identities section.
+First, go to the "Access (IAM)". Under "Manage Identities" section, select "Service IDs".
 
 ![2](../images/watsonx_3.png)
 
-Create a Service ID. Give it a name and some description to it, so when you comeback you know what you've created it for.
+Create a Service ID, give it a name and add a description to it, so when you comeback you know what you've created it for.
 
-Now under the  same section [Manage Identities], select API Keys and create an API key. We will use this for generating a bearer token for our API call.
-Give it a name and description and create the key and store it somewhere safe, this won't be accessible later.
+Next, under the  same section [Manage Identities], select "API Keys" and create an API key. This key will be used to generate a bearer token for our API call.
+Give the key a name and description, create the key and store it somewhere safe, as it won't be accessible later.
 
 ![3](../images/watsonx_3.png)
 
