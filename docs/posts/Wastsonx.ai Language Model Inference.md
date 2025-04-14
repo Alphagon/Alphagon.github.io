@@ -8,7 +8,6 @@ categories:
 tags:
   - Technology
 authors:
-  - yeshwanth
   - sumanth
 ---
 

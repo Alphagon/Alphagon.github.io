@@ -4,6 +4,7 @@ site_url: https://sitename.example
 
 theme:
   name: material
+  custom_dir: override
   palette:
     # Dark Mode
     - scheme: slate
