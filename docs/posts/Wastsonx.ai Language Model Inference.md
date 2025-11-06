@@ -7,8 +7,12 @@ categories:
   - LLM
 tags:
   - Technology
+  - IBM Watson
+  - API
+  - LLM
 authors:
   - sumanth
+description: A comprehensive guide to accessing and using language models on IBM Watson.ai platform for inference, including setup, authentication, and API usage.
 ---
 
 This blog will walk you through how to access language models on IBM Wastonx.ai platform and use them for inference.

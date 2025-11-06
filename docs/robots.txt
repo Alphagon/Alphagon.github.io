@@ -1,0 +1,20 @@
+# robots.txt for Alphagon Blog
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://alphagon.github.io/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# Disallow admin or build directories if they exist
+Disallow: /admin/
+Disallow: /.github/
+
+# Allow all content
+Allow: /posts/
+Allow: /tags/
+Allow: /stylesheets/
+Allow: /assets/

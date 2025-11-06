@@ -1,16 +1,34 @@
 site_name: My Blogs
-site_description: A collection of my blogs
-site_url: https://sitename.example
+site_description: A collection of technical blogs about AI, LLMs, and Technology
+site_url: https://alphagon.github.io
+site_author: Sumanth
 
 theme:
   name: material
   custom_dir: override
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
   palette:
     # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
+        name: Switch to light mode
       primary: deep orange
       accent: deep purple
 
@@ -18,12 +36,16 @@ theme:
     - scheme: default
       toggle:
         icon: material/weather-night
-        name: Light mode
+        name: Switch to dark mode
       primary: blue
       accent: deep orange
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - blog:
       blog_dir: .
       archive_date_format: yyyy
@@ -34,7 +56,8 @@ plugins:
         - AI
         - Life
       post_url_format: "{slug}"
-
+      post_readtime: true
+      post_readtime_words_per_minute: 200
   - tags:
       tags_file: tags.md
 
@@ -42,19 +65,68 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      name: Alphagon
+      name: Alphagon on GitHub
       link: https://github.com/Alphagon
-    - icon: /fontawesome/regular/envelope
-      name: contact us
+    - icon: fontawesome/regular/envelope
+      name: Email me
       link: mailto:y.saisumanth@gmail.com
-    # - icon: /material/mailbox
-    #   name: contact us
-    #   link: /contact
+  generator: false
+  copyright: Copyright &copy; 2025 Sumanth
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 
 markdown_extensions:
+  - abbr
+  - admonition
   - attr_list
+  - def_list
+  - footnotes
   - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
